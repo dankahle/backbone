@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>backbone</title>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+</head>
+<body>
+
+
+<script>
+
+    var Book = Backbone.Model.extend({});
+    var Books = Backbone.Collection.extend({
+        model: Book
+    });
+
+    var books = new Books([
+        {title:'one'},
+        {title:'two'}
+    ]);
+
+    console.log(JSON.stringify(books));
+
+</script>
+</body>
+</html>
